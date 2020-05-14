@@ -13,6 +13,6 @@ import com.car.details.model.CarDetailsModel;
  *
  */
 @Repository
-public interface CarDetailsRepository extends MongoRepository<CarDetailsModel,String>{
+public interface CarDetailsRepository extends MongoRepository<CarDetailsModel,String> , CarDetailsCriteriaRepository{
 
 }
