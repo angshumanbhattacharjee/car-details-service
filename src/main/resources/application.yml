@@ -1,0 +1,14 @@
+spring:
+  profiles: default
+  application:
+    name: car-details-service
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: car-details-database
+logging:
+  level:
+    root: INFO
+server:
+  port: 9091
