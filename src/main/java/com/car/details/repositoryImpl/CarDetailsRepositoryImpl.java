@@ -11,10 +11,10 @@ import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.util.StringUtils;
 
+import com.car.details.constants.IConstants;
 import com.car.details.model.CarDetailsCriteriaModel;
 import com.car.details.model.CarDetailsModel;
 import com.car.details.repository.CarDetailsCriteriaRepository;
-import com.car.details.repository.CarDetailsRepository;
 
 /**
  * @author ANGSHUMAN
@@ -55,15 +55,24 @@ public class CarDetailsRepositoryImpl implements CarDetailsCriteriaRepository {
 		
 		//getCarsbyUserId
 		if(!StringUtils.isEmpty(criteria.getUserId())) {
-			whereClause.addCriteria(Criteria.where("userId").is(criteria.getUserId()));
+			whereClause.addCriteria(Criteria.where(IConstants.USER_ID).is(criteria.getUserId()));
 		}
 		//getCarsbyStatus
 		if(!StringUtils.isEmpty(criteria.getCarStatus())) {
-			whereClause.addCriteria(Criteria.where("carStatus").is(criteria.getCarStatus()));
+			whereClause.addCriteria(Criteria.where(IConstants.CAR_STATUS).is(criteria.getCarStatus()));
 		}
 		//getCarsbyCarId
 		if(!StringUtils.isEmpty(criteria.getCarId())) {
-			whereClause.addCriteria(Criteria.where("carId").is(criteria.getCarId()));
+			whereClause.addCriteria(Criteria.where(IConstants.CAR_ID).is(criteria.getCarId()));
+		}
+		if(!StringUtils.isEmpty(criteria.getCarAddDate())) {
+			whereClause.addCriteria(Criteria.where(IConstants.CAR_ADD_DATE).is(criteria.getCarAddDate()));
+		}
+		if(!StringUtils.isEmpty(criteria.getCarManufacturerName())) {
+			whereClause.addCriteria(Criteria.where(IConstants.CAR_MANUFACTURER_NAME).is(criteria.getCarManufacturerName()));
+		}
+		if(!StringUtils.isEmpty(criteria.getCarModel())) {
+			whereClause.addCriteria(Criteria.where(IConstants.CAR_MODEL).is(criteria.getCarModel()));
 		}
 		return whereClause;
 	}

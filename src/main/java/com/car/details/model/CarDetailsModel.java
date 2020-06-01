@@ -59,5 +59,9 @@ public class CarDetailsModel implements Serializable {
 	@Getter
 	@Setter
 	Integer carStatus;
+	
+	@Getter
+	@Setter
+	String carAddDate;
 
 }

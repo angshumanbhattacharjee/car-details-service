@@ -41,5 +41,21 @@ public class CarDetailsCriteriaModel implements Serializable {
 	@Getter
 	@Setter
 	Integer carStatus;
+	
+	@Getter
+	@Setter
+	String carManufacturerName;
+	
+	@Getter
+	@Setter
+	String carModel;
+	
+	@Getter
+	@Setter
+	String carImage;
+	
+	@Getter
+	@Setter
+	String carAddDate;
 
 }

@@ -4,9 +4,6 @@
 package com.car.details.service;
 
 import java.util.List;
-
-import org.springframework.util.MultiValueMap;
-
 import com.car.details.model.CarDetailsCriteriaModel;
 import com.car.details.model.CarDetailsModel;
 

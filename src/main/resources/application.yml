@@ -6,7 +6,7 @@ spring:
     mongodb:
       host: localhost
       port: 27017
-      database: car-details-database
+      database: car-wash
 logging:
   level:
     root: INFO

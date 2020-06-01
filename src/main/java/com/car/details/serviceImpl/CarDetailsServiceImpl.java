@@ -13,6 +13,7 @@ import com.car.details.model.CarDetailsCriteriaModel;
 import com.car.details.model.CarDetailsModel;
 import com.car.details.repository.CarDetailsRepository;
 import com.car.details.service.CarDetailsService;
+import com.car.details.utility.CommonUtility;
 
 /**
  * @author ANGSHUMAN
@@ -71,6 +72,7 @@ public class CarDetailsServiceImpl implements CarDetailsService {
 		//for registering car details
 		else {
 			model.setCarStatus(2);
+			model.setCarAddDate(CommonUtility.getCurrentDateInString());
 		}
 		
 		// TODO Auto-generated method stub
