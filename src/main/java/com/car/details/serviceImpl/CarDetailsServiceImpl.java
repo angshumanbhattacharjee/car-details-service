@@ -4,6 +4,7 @@
 package com.car.details.serviceImpl;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -67,7 +68,9 @@ public class CarDetailsServiceImpl implements CarDetailsService {
 	private CarDetailsModel prepareObject(CarDetailsModel model) throws Exception {
 		//for updating car details
 		if(!StringUtils.isEmpty(model.getCarId())) {
+			Optional<CarDetailsModel> model1 = repository.findById(model.getCarId());
 			model.setCarStatus(2);
+			model.setUserId(model1.get().getUserId());
 		}
 		//for registering car details
 		else {
